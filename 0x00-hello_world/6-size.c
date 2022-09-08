@@ -1,15 +1,15 @@
 #include <stdio.h> 
 
 /**
- * main - print the string in the put function
- *
- * description: use the main function 
- * to print 'Programming is like building a multilingual puzzle'
- * return; 0
+ * main - entry point
+ * return: always 0
  */
 int main(void)
 { 
-	puts("\" "Programming is like building a multilingual puzzle");
+	printf("Size of a char: %d byte(s)\n", sizeof(char));
+	printf("Size of an int: %d byte(s)\n", sizeof(int));
+	printf("Size of a long int: %d byte(s)\n", sizeof(long int));
+	 printf("Size of a float: %d byte(s)\n", sizeof(float));
 	return (0);
 }
 
