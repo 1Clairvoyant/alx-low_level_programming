@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * _islower -> checks for lower characters
+  * _islower - main function 
   * @c: a character argmt
   *returns: 1 or 0 depending on the condition
   */
