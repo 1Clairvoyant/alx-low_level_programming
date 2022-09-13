@@ -4,6 +4,7 @@
   * print_alphabet_x10 -> prints more lowercase
   */
 void print_alphabet_x10(void);
+
 {
 	int j;
 	int x;
