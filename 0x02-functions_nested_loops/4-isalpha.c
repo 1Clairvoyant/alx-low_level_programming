@@ -1,12 +1,19 @@
-#include "main.h"
+include "main.h"
 
 /**
-  * _isalpha - checks for alphabet
-  * @c: a character argument to be checked
-  *  Return: 0 or 1 depending on the condition
-  */
+ * _isalpha - main function
+ *
+ * @c: character to compare
+ *
+ * Return: 1 if true, 0 if false
+ *
+ */
 
 int _isalpha(int c)
 {
-	return ((c >= 'a' && c <= 'z') || (C >= 'A' && C <= 'Z'));
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+	return (0);
 }
