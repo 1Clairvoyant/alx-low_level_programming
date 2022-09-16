@@ -1,12 +1,13 @@
 #include <stdio.h>
-
 /**
-  * main - checks the code for students
-  * Return: void
-  */
+ * main - check the code for Main School students.
+ *
+ * Return: void.
+ */
 
 int main(void)
 {
+
 	int i = 1;
 
 	while (i <= 100)
@@ -21,11 +22,11 @@ int main(void)
 		}
 		else if (i % 5 == 0)
 		{
-			printf("Bizz");
+			printf("Buzz");
 		}
 		else
 		{
-			printf("%i", o);
+			printf("%i", i);
 		}
 
 		if (i != 100)
@@ -37,4 +38,5 @@ int main(void)
 	}
 	putchar('\n');
 	return (0);
+
 }

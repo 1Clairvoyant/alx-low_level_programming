@@ -1,25 +1,32 @@
 #include "main.h"
 
 /**
-  * more_numbers - prints yet more numbers
-  */
+ * more_numbers - prints more numbers
+ * Return:void
+ */
 
 void more_numbers(void)
 {
-	int i;
-	int h;
+	char n, c;
+	int i = 0;
 
-	for (h = 0; h <= 9; h++)
+
+	while (i < 10)
 	{
-		for (i = 0; i <= 14; i++)
+		for (n = 0; n <= 14; n++)
 		{
-			if (o > 9)
+			c = n;
+			if (n > 9)
 			{
-				_putchar (i / 10 + '0')
+				_putchar('1');
+				c = n % 10;
 			}
-			_putchar(i % 10 '0');
-		}
-		_putchar ('\n');
-	}
-}
 
+			_putchar('0' + c);
+		}
+
+		_putchar('\n');
+		i++;
+	}
+
+}
