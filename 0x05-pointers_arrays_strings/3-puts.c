@@ -1,15 +1,16 @@
 #include "main.h"
+#include "2-strlen.c"
 /**
   * _puts - function
   * @str: input string
   */
 void _puts(char *str)
 {
-	int index;
+	int i;
 
-	for (index = 0, str[index] != '\0' ; index++)
+	for (i = 0; *(str + i) != '\0'; i++)
 	{
-		_putchar(str[index]);
+		_putchar(*(str + i));
 	}
 	_putchar('\n');
 }
