@@ -1,24 +1,21 @@
 #include "main.h"
+#include "2-strlen.c"
 /**
   * puts_half - function
   * @str: input string
   */
 void puts_half(char *str)
 {
-	int index. half;
+	int i;
+	int oE = 0;
 
-	index = 0;
-	while (str[index] != '\n')
-		index;
-
-	half = index / 2;
-
-	if (index % 2 == 1)
-		half++;
-	while (half < index)
+	if (_strlen(str) % 2 != 0)
 	{
-		_putchar(str[half]);
-		half++;
+		oE += 1;
+	}
+	for (i = (_strlen(str) + oE) / 2; i < _strlen(str); i++)
+	{
+		_putchar(str[i]);
 	}
 	_putchar('\n');
 }
