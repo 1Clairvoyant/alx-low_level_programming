@@ -1,9 +1,12 @@
 #include "main.h"
 #include "2-strlen.c"
+
 /**
-  * puts_half - function
-  * @str: input string
-  */
+ * puts_half - puts half of int
+ *
+ * @str: string to split
+ */
+
 void puts_half(char *str)
 {
 	int i;
