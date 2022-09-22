@@ -1,13 +1,12 @@
-#include "main.h"
 /**
  * infinite_add - add 2 integers.
+ *int  _atoi - main function
  * @n1: integer
  * @n2: integer
  * @r: buffer
  * size_r: size of r
  * Return: char
  */
-
 int _atoi(char *s)
 {
 	int sign = 1, resp = 0, firstNum;
@@ -19,7 +18,6 @@ int _atoi(char *s)
 			sign *= -1;
 		}
 	}
-
 	for (int i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
 	{
 		resp *= 10;
@@ -31,34 +29,30 @@ int _atoi(char *s)
 
 void int_to_string(int n)
 {
-int divisor = 1, i, resp;
+	int divisor = 1, i, resp;
 
+	for (i = 0; n / divisor > 9; i++)
+	{
+		divisor *= 10;
+	}
 
-for (i = 0; n / divisor > 9; i++)
-{
-	divisor *= 10;
+	char str[i];
+
+	for (int cmpt = 0; divisor >= 10; divisor /= 10, cmpt++)
+	{
+		resp = n / divisor;
+		str[cmpt] = '0' + resp;
+		n = n - resp * divisor;
+	}
+	str[i] = ('0' + n);
 }
-
-char str[i];
-
-for (int cmpt = 0; divisor >= 10; divisor /= 10, cmpt++)
-{
-	resp = n / divisor;
-	str[cmpt] = '0' + resp;
-	n = n - resp * divisor;
-}
-str[i] = ('0' + n);
-
-}
-
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-    int sum, a, b;
-    a = _atoi(n1);
-    b = _atoi(n2);
+	int sum, a, b;
 
-    sum = a + b;
+	a = _atoi(n1);
+	b = _atoi(n2);
 
-
+	sum = a + b;
 }
