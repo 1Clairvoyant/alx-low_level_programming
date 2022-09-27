@@ -1,12 +1,10 @@
 #include "main.h"
 /**
-  * strspn - gets the length of a
-  *prefix substring
-  *@s: the string to be searched
-  *@accept: the prefix to be measured
-  * Return: the number of bytes in s which consist of only
-  *bytes from accept
-  */
+  * *_strspn - return the number of occurent of a string
+  * @s: string to check
+  * @accept: character to match
+  * Return: int
+ */
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int bytes = 0;
