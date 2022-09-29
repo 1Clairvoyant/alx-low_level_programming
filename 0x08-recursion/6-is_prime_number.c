@@ -3,10 +3,10 @@
 int actual_prime(int n, int i);
 
 /**
-  *is_prime_number - does it for me
-  *@n: number
-  * Return: 1 if n is a prime number, 0 if not
-  */
+ * is_prime_number - check if n is a prime number
+ * @n: int
+ * Return: 0 or 1
+ */
 int is_prime_number(int n)
 {
 	if (n <= 1)
@@ -15,11 +15,11 @@ int is_prime_number(int n)
 }
 
 /**
-  *actual_prime - calculates if a num is prime or not
-  *@n: number
-  *@i: counter
-  *return: boolean
-  */
+ * actual_prime - check all number < n if they can divide it
+ * @n: int
+ * @i: int
+ * Return: int
+ */
 int actual_prime(int n, int i)
 {
 	if (i == 1)
