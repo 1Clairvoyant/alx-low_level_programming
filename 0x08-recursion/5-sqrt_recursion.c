@@ -1,11 +1,13 @@
 #include "main.h"
 
 int real_root(int n, int i);
+
 /**
-  *_sqrt_recursion - returns sqrt of the number
-  *@n: number
-  * return: sqrt
-  */
+ * helper - helps decide if i'm right
+ * @i: integer to guess
+ * @n: integer to get root of
+ * Return: value of root
+ */
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
@@ -14,11 +16,10 @@ int _sqrt_recursion(int n)
 }
 
 /**
-  *real_root - finds the natural sqrt of a num
-  *@n: input
-  *@i: counter
-  *return: sqrt
-  */
+ * _sqrt_recursion - returns square root
+ * @n: integer to return
+ * Return: returns int of squareroot
+ */
 
 int real_root(int n, int i)
 {

@@ -3,7 +3,7 @@
 int actual_prime(int n, int i);
 
 /**
-  *is_prime_number - function that returns the natural square root of a number
+  *is_prime_number - does it for me
   *@n: number
   * Return: 1 if n is a prime number, 0 if not
   */
@@ -15,10 +15,10 @@ int is_prime_number(int n)
 }
 
 /**
-  *actual_prime - calculates if a num is prime
+  *actual_prime - calculates if a num is prime or not
   *@n: number
   *@i: counter
-  *return: 1 if n is prime, 0 if not
+  *return: boolean
   */
 int actual_prime(int n, int i)
 {
