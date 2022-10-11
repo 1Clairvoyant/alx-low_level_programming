@@ -2,75 +2,66 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * new_dog - create new data structure for dog
- * @name: name of dog
- * @age: age of dog
- * @owner: dog owner
- *
- * Return: Pointer to new dog
- **/
+ * _strlen - returns tge length of a string
+ * @str: The string
+ * Return: length of string
+ */
+int _strlen(char *str)
+{
+	int i;
+
+	for (i = 0; str[i]; str++)
+		i++;
+	return (i);
+}
+
+/**
+ * _strcpy - copies a string from s2 to s1
+ * @s1: The destination
+ * @s2: The source string
+ * Return: a pointer to the destination string
+ */
+
+char *_strcpy(char *s1, char *s2)
+{
+	int i;
+
+	for (i = 0; s2[i]; i++)
+		s1[i] = s2[i];
+	s1[i] = '\0';
+	return (s1);
+}
+/**
+ * new_dog - creates a new dog
+ * @name: The dog's name
+ * @age: its age
+ * @owner: its owner
+ * Return: The new dog structure
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
-	int len_name, len_owner;
+	dog_t *bingo;
 
-	new_dog = malloc(sizeof(dog_t));
-	if (new_dog == NULL)
+	if (name == NULL || age < 0 || owner == NULL)
 		return (NULL);
-
-	len_name = _strlen(name);
-	new_dog->name = malloc(sizeof(char) * len_name + 1);
-	if (new_dog->name == NULL)
-	{
-		free(new_dog);
+	bingo = malloc(sizeof(dog_t));
+	if (bingo == NULL)
 		return (NULL);
-	}
-	new_dog->name = _strcpy(new_dog->name, name);
-	len_owner = _strlen(owner);
-	new_dog->owner = malloc(sizeof(char) * len_owner + 1);
-	if (new_dog->owner == NULL)
+	bingo->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	if (bingo->name == NULL)
 	{
-		free(new_dog->name);
-		free(new_dog);
+		free(bingo);
 		return (NULL);
 	}
-
-	new_dog->owner = _strcpy(new_dog->owner, owner);
-	new_dog->age = age;
-
-	return (new_dog);
-}
-
-/**
- * _strlen - determinates the lenght of a string
- * @s: pointer to string
- * Return: the length
- */
-int _strlen(char *s)
-{
-	int a;
-
-	for (a = 0; s[a] != '\0'; a++)
-	;
-	return (a);
-}
-
-/**
- * _strcpy - copies a pointed string
- * @dest: pointer to the destine string
- * @src: pointer to the source string
- * Return: the adress of the destiny string
- */
-char *_strcpy(char *dest, char *src)
-{
-	int a = 0;
-
-	while (src[a] != '\0')
+	bingo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (bingo->owner == NULL)
 	{
-		dest[a] = src[a];
-		a++;
+		free(bingo->name);
+		free(bingo);
+		return (NULL);
 	}
-
-	dest[a] = '\0';
-	return (dest);
+	bingo->name = _strcpy(bingo->name, name);
+	bingo->age = age;
+	bingo->owner = _strcpy(bingo->owner, owner);
+	return (bingo);
 }
