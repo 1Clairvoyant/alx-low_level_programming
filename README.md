@@ -1,1 +1,7 @@
-This program will assign a random number to the variable n each time it is executed. Complete the source code in order to print whether the number stored in the variable n is positive or negative
+0x0A. C - argc, argv
+a program that prints its name, followed by a new line.
+a program that prints the number of arguments passed into it.
+
+a program that prints all arguments it receives
+a program that multiplies two numbers.
+a program that adds positive numbers.
